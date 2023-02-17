@@ -6,20 +6,15 @@
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>  
         <properties>
        		<property name="hibernate.archive.autodetection" value="class" />
-       		 
-
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-			<property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/animaljpadb?serverTimezone=UTC" />
-			<property name="hibernate.connection.user" value="root" />
-			<property name="hibernate.connection.password" value="root" />
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
- 
-
-			<property name="hibernate.show_sql" value="true" />
+		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+		<property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+		<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/animaljpadb?serverTimezone=UTC" />
+		<property name="hibernate.connection.user" value="root" />
+		<property name="hibernate.connection.password" value="root" />
+		<property name="hibernate.hbm2ddl.auto" value="update"/>
+ 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
-			<property name="use_sql_comments" value="true" />
-			
-		</properties>
+			<property name="use_sql_comments" value="true" />			
+	 </properties>
     </persistence-unit>
 </persistence>
