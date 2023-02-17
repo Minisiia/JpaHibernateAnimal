@@ -1,16 +1,11 @@
 package animal;
 
 import animal.entity.Animal;
-import org.hibernate.Criteria;
-
-import javax.persistence.Query;
-
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.List;
 
 public class AnimalHelper {
@@ -24,7 +19,7 @@ public class AnimalHelper {
 
     public List<Animal> getAnimalList() {
         em.getTransaction().begin();
-        Query query = em.createQuery("SELECT animal_table FROM Animal animal_table");
+        Query query = em.createQuery("SELECT animal_table FROM Animal animal_table"); // HQL
         List<Animal> list = query.getResultList();
         em.getTransaction().commit();
         emf.close();
@@ -53,7 +48,7 @@ public class AnimalHelper {
         return animal;
     }
 
-    public void update(int id,String name) {
+    public void update(int id, String name) {
         em.getTransaction().begin();
         Animal animal = em.find(Animal.class, id);
         animal.setName(name);
