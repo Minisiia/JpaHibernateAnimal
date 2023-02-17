@@ -11,7 +11,7 @@ public class HibernateUtil {
     static {
         try {
              factory = new AnnotationConfiguration()
-                    .configure("src/animal/hibernate.cfg.xml")
+                    .configure("animal/hibernate.cfg.xml")
                     .buildSessionFactory();
         } catch (HibernateException e) {
             e.printStackTrace();

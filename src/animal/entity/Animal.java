@@ -1,14 +1,18 @@
 package animal.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "animal_table")
 public class Animal {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column
     private String name;
+    @Column
     private int age;
+    @Column
     private boolean tail;
 
     public int getId() {
